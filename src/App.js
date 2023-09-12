@@ -29,7 +29,7 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = 'grey';
       showAlert("Dark mode has been enabled", "Success");
-      document.title = 'Textutials - Dark Mode';
+      // document.title = 'Textutials - Dark Mode';
       // setInterval(() => {
       //   document.title = 'Textutials is Amazing Mode';
       // }, 2000);
@@ -41,7 +41,7 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "Success");
-      document.title = 'Textutials - Light Mode';
+      // document.title = 'Textutials - Light Mode';
     }
   }
   return (
@@ -55,7 +55,7 @@ function App() {
     {/* <TextForm showAlert={showAlert} heading="Enter the text to analize below" mode={mode}/> */}
     {/* <About /> */}
     <Routes>
-          <Route exact path='/' element={<TextForm mode={mode} showAlert={showAlert} heading="Enter the text to analize below"/>}></Route>
+          <Route exact path='/' element={<TextForm mode={mode} showAlert={showAlert} heading=" Try Textutials - Word Counter, Character Counter,Remove extra Spaces"/>}></Route>
           <Route exact path='/about' element={<About mode={mode} />}></Route>
         </Routes> 
     </div>
