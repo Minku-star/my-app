@@ -24,6 +24,6 @@ yarn-error.log*
 
 #src
 /Components
-.Nav_dummy.js
-.Text_Dummy.js
-.App.js
+/Nav_dummy.js
+/Text_Dummy.js
+/App.js
