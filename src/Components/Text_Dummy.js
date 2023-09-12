@@ -18,7 +18,9 @@ export default function TextForm(props) {
         props.showAlert("Text Cleared", "Success");
     }
     const handleCopy = () => {
-        navigator.clipboard.writeText(text);
+        var text = document.getElementById("myBox");
+        navigator.clipboard.writeText(text.value);
+        document.getSelection().removeAllRanges();
         props.showAlert("Text Copied", "Success");
     }
     const handleExtraSpaces = () =>{
@@ -27,7 +29,7 @@ export default function TextForm(props) {
         props.showAlert("Remove Extra Spaces", "Success");
     }
     const handleOnChange = (event)=>{
-        // console.log("Upper case was clicked");
+        console.log("Upper case was clicked");
         setText(event.target.value);
     }
 
@@ -50,7 +52,7 @@ export default function TextForm(props) {
     </div>
     <div className="container my-3" style={{color: props.mode === 'dark'?'white':'#042743'}}>
         <h2>Your text summery</h2>
-        <p>{text.split(/\s+/).filter((element)=> {return element.length!==0}).length} words and {text.length} characters</p>
+        <p>{text.split(" ").filter((element)=> {return element.length!==0}).length} words and {text.length} characters</p>
         <p>{0.008 * text.split(" ").filter((element)=> {return element.length!==0}).length} Minutes read</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Nothing to preview!"}</p>
