@@ -55,7 +55,7 @@ function App() {
     {/* <TextForm showAlert={showAlert} heading="Enter the text to analize below" mode={mode}/> */}
     {/* <About /> */}
     <Routes>
-          <Route exact path='/' element={<TextForm mode={mode} showAlert={showAlert} heading=" Try Textutials - Word Counter, Character Counter,Remove extra Spaces"/>}></Route>
+          <Route exact path='/' element={<TextForm mode={mode} showAlert={showAlert} heading=" Try Textutials - Word Counter, Character Counter, Clear Text"/>}></Route>
           <Route exact path='/about' element={<About mode={mode} />}></Route>
         </Routes> 
     </div>
